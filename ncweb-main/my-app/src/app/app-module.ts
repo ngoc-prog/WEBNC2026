@@ -18,6 +18,7 @@ import { Listproduct2 } from './listproduct2/listproduct2';
 import { Customer } from './customer/customer';
 import { Listproduct3 } from './listproduct3/listproduct3';
 import { Ex18 } from './ex18/ex18';
+import { Ex10 } from './ex10/ex10';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { Ex18 } from './ex18/ex18';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    Ex10
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
