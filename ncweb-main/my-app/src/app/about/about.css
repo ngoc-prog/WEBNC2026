@@ -1,51 +1,158 @@
 .cv-container {
     max-width: 600px;
     margin: 40px auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Đổ bóng sâu tạo cảm giác cao cấp */
-    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 
+                0 1px 4px rgba(0, 0, 0, 0.04);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: box-shadow 0.3s ease;
+}
+
+.cv-container:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 
+                0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .cv-header {
     display: flex;
     align-items: center;
-    gap: 25px;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    gap: 30px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.cv-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 2px;
+}
+
+.profile-image {
+    position: relative;
 }
 
 .profile-image img {
-    width: 120px; /* Tăng kích thước ảnh */
+    width: 120px;
     height: 120px;
-    border-radius: 15px; /* Bo góc nhẹ thay vì hình tròn hoàn toàn */
+    border-radius: 20px;
     object-fit: cover;
-    border: 3px solid #f0f0f0;
+    border: 4px solid #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.25);
 }
 
 .profile-info h2 {
-    margin: 0;
-    color: #007bff;
-    font-size: 24px;
+    margin: 0 0 8px 0;
+    color: #1a1a1a;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 .job-title {
-    color: #666;
-    font-style: italic;
-    margin: 5px 0 15px 0;
+    color: #007bff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    letter-spacing: 0.3px;
 }
 
 .contact-item {
     font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 1.6;
+    transition: color 0.2s ease;
+}
+
+.contact-item strong {
+    min-width: 90px;
     color: #333;
-    margin-bottom: 5px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.contact-item:hover {
+    color: #007bff;
+}
+
+.cv-section {
+    margin-bottom: 30px;
 }
 
 .cv-section h3 {
-    color: #2c3e50;
-    border-left: 4px solid #007bff;
-    padding-left: 10px;
-    margin-bottom: 10px;
+    color: #1a1a1a;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    letter-spacing: -0.3px;
+}
+
+.cv-section h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 24px;
+    background: linear-gradient(180deg, #007bff, #0056b3);
+    border-radius: 3px;
+}
+
+.cv-section p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 640px) {
+    .cv-container {
+        margin: 20px;
+        padding: 25px;
+    }
+    
+    .cv-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .cv-header::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .profile-info h2 {
+        font-size: 24px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .contact-item strong {
+        margin-bottom: 4px;
+    }
 }

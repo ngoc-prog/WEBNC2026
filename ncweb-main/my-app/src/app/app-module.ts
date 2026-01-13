@@ -19,6 +19,9 @@ import { Customer } from './customer/customer';
 import { Listproduct3 } from './listproduct3/listproduct3';
 import { Ex18 } from './ex18/ex18';
 import { Ex10 } from './ex10/ex10';
+import { Pagenotfound } from './pagenotfound/pagenotfound';
+import { Listcustomer } from './listcustomer/listcustomer';
+import { Customerdetail } from './customerdetail/customerdetail';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { Ex10 } from './ex10/ex10';
     Listproduct2,
     Customer,
     Listproduct3,
-    Ex18
+    Ex18,
+    Pagenotfound,
+    Listcustomer,
+    Customerdetail
   ],
   imports: [
     BrowserModule,
