@@ -26,6 +26,9 @@ import { Listcustomerservice } from './listcustomerservice/listcustomerservice';
 import { Ex13ProductList } from './ex13-product-list/ex13-product-list';
 import { Ex13ProductDetail } from './ex13-product-detail/ex13-product-detail';
 import { Ex14Catalog } from './ex14-catalog/ex14-catalog';
+import { Ex19Product } from './ex19-product/ex19-product';
+import { Ex19ListProduct } from './ex19-list-product/ex19-list-product';
+import { Ex19ServiceProduct } from './ex19-service-product/ex19-service-product';
 
 
 @NgModule({
@@ -50,7 +53,10 @@ import { Ex14Catalog } from './ex14-catalog/ex14-catalog';
     Listcustomerservice,
     Ex13ProductList,
     Ex13ProductDetail,
-    Ex14Catalog
+    Ex14Catalog,
+    Ex19Product,
+    Ex19ListProduct,
+    Ex19ServiceProduct,
   ],
   imports: [
     BrowserModule,

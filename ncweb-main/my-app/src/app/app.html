@@ -49,4 +49,29 @@ Welcome to My App
 
 </div>-->
 
-<router-outlet></router-outlet>
+<div style="padding: 20px;">
+  <h1>Exercise 19: Configuration Routing</h1>
+  
+  <table border="1" cellpadding="10">
+    <tr>
+      <td>
+        <input type="button" value="Product" [routerLink]="'/product'">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" value="List-Product" [routerLink]="'/list-product'">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" value="Service-Product" [routerLink]="'/service-product'">
+      </td>
+    </tr>
+  </table>
+  
+  <hr>
+  
+  <!-- Đây là nơi hiển thị component -->
+  <router-outlet></router-outlet>
+</div>

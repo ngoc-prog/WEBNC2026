@@ -13,6 +13,9 @@ import { Ex13ProductDetail } from './ex13-product-detail/ex13-product-detail';
 import { Ex14Catalog } from './ex14-catalog/ex14-catalog';
 import { Ex18 } from './ex18/ex18';
 import { Ex18CustomerService } from './ex18-customer.service';
+import { Ex19ServiceProduct } from './ex19-service-product/ex19-service-product';
+import { Ex19ListProduct } from './ex19-list-product/ex19-list-product';
+import { Ex19Product } from './ex19-product/ex19-product';
 
 const routes: Routes = [
   { path:"gioi-thieu",component:About},
@@ -23,8 +26,11 @@ const routes: Routes = [
   {path:"listcustomerservice",component:Listcustomerservice},
   {path:"listcustomer/:id",component:Customerdetail},
   {path:"listcustomerservice/:id",component:Customerdetail},
-  {path: '', component: Ex18},
   {path: 'ex18-group-customers', component: Ex18CustomerService},
+  {path: '', redirectTo: '/product', pathMatch: 'full' },  // Redirect trang chủ
+  {path: 'product', component: Ex19Product },
+  {path: 'list-product', component: Ex19ListProduct },
+  {path: 'service-product', component: Ex19ServiceProduct },
   {path:"**",component:Pagenotfound}
 ];
 
@@ -33,3 +39,10 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+// Export RoutingComponent để dùng trong app.module.ts
+export const RoutingComponent = [
+  Ex19Product,
+  Ex19ListProduct,
+  Ex19ServiceProduct
+]
