@@ -1,24 +1,38 @@
-<p>ex18 works!</p>
-<div *ngFor="let customerType of customers">
-  <h2>{{customerType.CustomterTypeName}}</h2>
-  <table border="1">
-    <thead>
+<h2>Exercise 18: Json Array Model - Group Customers</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <!-- Vòng lặp ngoài: duyệt qua các nhóm customer -->
+    <ng-container *ngFor="let group of customerGroups">
+      
+      <!-- Header của nhóm -->
       <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Age</th>
-        <th>Image</th>
+        <td colspan="5">
+          <strong>{{group.CustomerTypeId}} - {{group.CustomerTypeName}}</strong>
+        </td>
       </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let customer of customerType.Customers">
+      
+      <!-- Vòng lặp trong: duyệt qua các customer trong nhóm -->
+      <tr *ngFor="let customer of group.Customers">
         <td>{{customer.Id}}</td>
         <td>{{customer.Name}}</td>
         <td>{{customer.Email}}</td>
         <td>{{customer.Age}}</td>
-        <td><img [src]="customer.Image" alt="avatar" width="50" height="50"></td>
+        <td>
+          <img [src]="customer.Image" width="100" alt="{{customer.Name}}">
+        </td>
       </tr>
-    </tbody>
-  </table>
-</div>
+      
+    </ng-container>
+  </tbody>
+</table>

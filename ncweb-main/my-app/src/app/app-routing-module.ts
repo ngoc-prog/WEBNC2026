@@ -11,6 +11,8 @@ import { Listcustomerservice } from './listcustomerservice/listcustomerservice';
 import { Ex13ProductList } from './ex13-product-list/ex13-product-list';
 import { Ex13ProductDetail } from './ex13-product-detail/ex13-product-detail';
 import { Ex14Catalog } from './ex14-catalog/ex14-catalog';
+import { Ex18 } from './ex18/ex18';
+import { Ex18CustomerService } from './ex18-customer.service';
 
 const routes: Routes = [
   { path:"gioi-thieu",component:About},
@@ -21,8 +23,8 @@ const routes: Routes = [
   {path:"listcustomerservice",component:Listcustomerservice},
   {path:"listcustomer/:id",component:Customerdetail},
   {path:"listcustomerservice/:id",component:Customerdetail},
-  {path: '', component: Ex14Catalog},
-  {path: 'ex14-catalog/:id', component: Ex14Catalog},
+  {path: '', component: Ex18},
+  {path: 'ex18-group-customers', component: Ex18CustomerService},
   {path:"**",component:Pagenotfound}
 ];
 
