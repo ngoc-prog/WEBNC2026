@@ -1,0 +1,36 @@
+<h2>Exercise 14: Json Array Model - Product Catalog</h2>
+
+<table border="1">
+  <!-- Duyệt qua từng category -->
+  <ng-container *ngFor="let category of categories">
+    
+    <!-- Header của category -->
+    <tr>
+      <td colspan="2"><strong>Ma Danh Muc</strong></td>
+      <td colspan="2"><strong>Ten Danh Muc</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2">{{category.Cateid}}</td>
+      <td colspan="2">{{category.CateName}}</td>
+    </tr>
+    
+    <!-- Header của products -->
+    <tr>
+      <td><strong>Ma San Pham</strong></td>
+      <td><strong>Ten San Pham</strong></td>
+      <td><strong>Gia San Pham</strong></td>
+      <td><strong>Picture</strong></td>
+    </tr>
+    
+    <!-- Duyệt qua từng product trong category (Nested ngFor) -->
+    <tr *ngFor="let product of category.Products">
+      <td>{{product.ProductId}}</td>
+      <td>{{product.ProductName}}</td>
+      <td>{{product.Price}}</td>
+      <td>
+        <img [src]="product.Image" width="50">
+      </td>
+    </tr>
+    
+  </ng-container>
+</table>

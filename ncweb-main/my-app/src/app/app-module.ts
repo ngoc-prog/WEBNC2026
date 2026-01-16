@@ -25,6 +25,7 @@ import { Customerdetail } from './customerdetail/customerdetail';
 import { Listcustomerservice } from './listcustomerservice/listcustomerservice';
 import { Ex13ProductList } from './ex13-product-list/ex13-product-list';
 import { Ex13ProductDetail } from './ex13-product-detail/ex13-product-detail';
+import { Ex14Catalog } from './ex14-catalog/ex14-catalog';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { Ex13ProductDetail } from './ex13-product-detail/ex13-product-detail';
     Customerdetail,
     Listcustomerservice,
     Ex13ProductList,
-    Ex13ProductDetail
+    Ex13ProductDetail,
+    Ex14Catalog
   ],
   imports: [
     BrowserModule,
