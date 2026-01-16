@@ -23,9 +23,12 @@ export class Customerdetail {
         if (id != null)//lấy được id từ routing nào đó gửi qua
         {
           //sau đó sẽ truy vấn id này trong dataset của mình:
-          this.selected_customer = this.customers.find(cust => cust.id == id)
+          this.selected_customer = this.customers.find(c => c.id == id)
         }
       }
     )
+  }
+  go_back() {
+    this.router.navigate(['listcustomer']);
   }
 }

@@ -22,6 +22,9 @@ import { Ex10 } from './ex10/ex10';
 import { Pagenotfound } from './pagenotfound/pagenotfound';
 import { Listcustomer } from './listcustomer/listcustomer';
 import { Customerdetail } from './customerdetail/customerdetail';
+import { Listcustomerservice } from './listcustomerservice/listcustomerservice';
+import { Ex13ProductList } from './ex13-product-list/ex13-product-list';
+import { Ex13ProductDetail } from './ex13-product-detail/ex13-product-detail';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { Customerdetail } from './customerdetail/customerdetail';
     Ex18,
     Pagenotfound,
     Listcustomer,
-    Customerdetail
+    Customerdetail,
+    Listcustomerservice,
+    Ex13ProductList,
+    Ex13ProductDetail
   ],
   imports: [
     BrowserModule,

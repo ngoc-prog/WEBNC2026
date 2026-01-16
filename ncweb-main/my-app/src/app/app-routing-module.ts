@@ -7,14 +7,21 @@ import { Listproduct3 } from './listproduct3/listproduct3';
 import { Pagenotfound } from './pagenotfound/pagenotfound';
 import { Listcustomer } from './listcustomer/listcustomer';
 import { Customerdetail } from './customerdetail/customerdetail';
+import { Listcustomerservice } from './listcustomerservice/listcustomerservice';
+import { Ex13ProductList } from './ex13-product-list/ex13-product-list';
+import { Ex13ProductDetail } from './ex13-product-detail/ex13-product-detail';
 
 const routes: Routes = [
   { path:"gioi-thieu",component:About},
   {path:"sanpham1",component:Listproduct1},
   {path:"sanpham2",component:Listproduct2},
   {path:"sanpham3",component:Listproduct3},
-  {path:"list customer",component:Listcustomer},
-  {path:"list customer/:id",component:Customerdetail},
+  {path:"listcustomer",component:Listcustomer},
+  {path:"listcustomerservice",component:Listcustomerservice},
+  {path:"listcustomer/:id",component:Customerdetail},
+  {path:"listcustomerservice/:id",component:Customerdetail},
+  {path: '', component: Ex13ProductList},
+  {path: 'ex13-product-detail/:id', component: Ex13ProductDetail},
   {path:"**",component:Pagenotfound}
 ];
 

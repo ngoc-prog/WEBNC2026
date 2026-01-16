@@ -22,6 +22,6 @@ export class Listcustomer {
   }
   view_detail(id:any)
   {
-    this.router.navigate(["list customer",id]);
+    this.router.navigate(["listcustomer",id]);
   }
 }
